@@ -1,0 +1,69 @@
+<view class='{{themes}}'>
+<swiper class="swiper-home" current="{{current}}" bindchange="onSwiperChange">
+    <swiper-item wx:for="{{weatherData}}" wx:for-index="idx" wx:for-item="itemName" wx:key="key" >
+      <scroll-view class="scroll" scroll-y="true">
+        <view class="top" />
+        <view class="forecast_panel">
+          <view class="currentCity">{{itemName.name}}</view>
+          <view class="today_wheather">{{itemName.todayWeatherData.weather}}</view>
+          <view class="realTimeTemperature">{{itemName.todayWeatherData.temperature}}℃</view>
+          <view class="date">
+            <view class="week_num">{{itemName.todayWeatherData.date}}</view>
+            <view class="week_num">{{itemName.todayWeatherData.week}}</view>
+            <view class="week_num">{{itemName.todayWeatherData.wind}}</view>
+          </view>
+          <view class="other">
+            <view class="week_num">空气质量:{{itemName.todayWeatherData.airLevel}}</view>
+            <view class="week_num">湿度:{{itemName.todayWeatherData.humidity}}</view>
+            <view class="week_num">能见度:{{itemName.todayWeatherData.visibility}}</view>
+          </view>
+          <view class="airTips">{{itemName.todayWeatherData.airTips}}</view>
+        </view>
+
+        <view class="forecast_bar">
+          <view class="forecast_start">
+            <view class="forecast_start_left">5天预报</view>
+            <navigator class="forecast_start_right" url="/pages/all/all?id={{cityId}}">15天30天预报
+              <D-icon size="5vw" iconName="{{weatherIcon.qing}}" />
+            </navigator>
+          </view>
+          <view class="forecast_end">
+            <view class="forecast_item" wx:for="{{itemName.weekWeatherData}}" wx:for-index="idx" wx:for-item="itemName"
+              wx:key="key" >
+              <view class="week">{{itemName.week}}</view>
+              <view class="weather">{{itemName.weather}}
+              </view>
+              <view class="temperature_icon">
+                <D-icon iconName="{{weatherIcon[itemName.weatherIcon]}}" size="10vw"></D-icon>
+              </view>
+              <view class='temperature_box'>
+                <view class="temperature">{{itemName.temperatureMax}}</view>
+                <view class="temperature">↕</view>
+                <view class="temperature">{{itemName.temperatureMin}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='ad_bar'><ad unit-id="adunit-d3ce5374005455eb"></ad></view>
+        <view class="tips">
+            <view class="tips_item" wx:for="{{itemName.weekWeatherData[0].tips}}" wx:for-index="idx"
+              wx:for-item="itemName" wx:key="key">
+              <view class="tips_item_left">
+                <text class="title">{{itemName.title}}</text>
+                <text class="des">{{itemName.desc}}</text>
+              </view>
+              <view class="tips_item_right">
+                <text class="zs">{{itemName.level}}</text>
+              </view>
+            </view>
+          </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+  <view class="bottom" />
+        <i-tab-bar i-class="tab_bar" fixed="true" current="{{ current }}"  bindchange="handleChange">
+    <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+    <i-tab-bar-item key="setuppage" icon="setup" current-icon="setup_fill" title="其他城市"></i-tab-bar-item>
+</i-tab-bar>
+  <i-spin size="large" fix wx:if="{{ spinShow }}"></i-spin>
+  </view>

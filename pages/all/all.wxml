@@ -1,0 +1,62 @@
+<view class="{{themes}}">
+    <view class="bar" wx:for="{{weather.data}}" wx:for-index="idx" wx:for-item="itemName" wx:key="key" wx:if="{{idx<7}}">
+        <view class="date">
+            <view class="date_start">
+                <text>{{itemName.week}}</text>
+                <D-air air="{{itemName.date_nl}}" />
+            </view>
+
+            <text>{{itemName.date}}</text>
+        </view>
+        <text class="weather">{{itemName.wea}}</text>
+        <D-icon class="weatherIcon" size="10vw" iconName="{{weatherIcon[itemName.wea_img]}}" />
+        <text class="wind">{{itemName.win}}</text>
+        <view class="tem">
+            <view class="temMax">
+                <text class="note">MAX</text>
+                <text>{{itemName.tem1}}℃</text>
+            </view>
+            <view class="temMin">
+                <text class="note">MIN</text>
+                <text>{{itemName.tem2}}℃</text>
+            </view>
+
+
+        </view>
+
+
+        <i-spin size="large" fix wx:if="{{ spinShow }}"></i-spin>
+    </view>
+    <view class='ad_bar'><ad unit-id="adunit-ee14ea8400d11af5"></ad></view>
+    <view class="bar" wx:for="{{weather.data}}" wx:for-index="idx" wx:for-item="itemName" wx:key="key" wx:if="{{idx>=7}}">
+        <view class="date">
+            <view class="date_start">
+                <text>{{itemName.week}}</text>
+                <D-air air="{{itemName.date_nl}}" />
+            </view>
+
+            <text>{{itemName.date}}</text>
+        </view>
+        <text class="weather">{{itemName.wea}}</text>
+        <D-icon class="weatherIcon" size="10vw" iconName="{{weatherIcon[itemName.wea_img]}}" />
+        <text class="wind">{{itemName.win}}</text>
+        <view class="tem">
+            <view class="temMax">
+                <text class="note">MAX</text>
+                <text>{{itemName.tem1}}℃</text>
+            </view>
+            <view class="temMin">
+                <text class="note">MIN</text>
+                <text>{{itemName.tem2}}℃</text>
+            </view>
+
+
+        </view>
+
+
+        
+  
+    </view>
+    <!-- <view class='ad_bar'><ad unit-id="adunit-d3ce5374005455eb"></ad></view> -->
+    <i-spin size="large" fix wx:if="{{ spinShow }}"></i-spin>
+</view>

@@ -1,0 +1,7 @@
+/* pages/search/search.wxss */
+@import "/libs/wxSearch/wxSearch.wxss";
+@import "/themes/themes.wxss";
+.page{
+    width: 100vw;
+    height: 100vh;
+}

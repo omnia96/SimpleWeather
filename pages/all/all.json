@@ -1,0 +1,8 @@
+{
+    "usingComponents":{
+        "D-icon":"/components/D-icon/index",
+        "D-air":"/components/D-air/index",
+        "i-spin": "/components/spin/index"
+    },
+    "navigationBarTitleText": "40天天气预报"
+}

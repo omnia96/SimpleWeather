@@ -1,0 +1,4 @@
+<view class="fill">
+<image class="logo" src="image/logo.png"/>
+<view class="introduced">天气预报7天有实时天气预报，一周天气预报功能(最多40日)，空气质量查看。界面精美简约，回归天气本质，不臃肿。</view>
+</view>

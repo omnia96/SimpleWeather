@@ -1,0 +1,189 @@
+@import "/fonts/freecns.wxss";
+@import "/themes/themes.wxss";
+
+.swiper-home{
+    width: 100vw;
+    height: 100vh;
+}
+.scroll{
+    width: 100vw;
+    height: 100vh;
+}
+.top{
+    height: 1vw;
+}
+.forecast_panel{
+    margin: 2vw;
+    /* height: 60vw; */
+    border-radius: 1.5vw;
+    padding: 2vw;
+}
+.currentCity{
+    font-size: 5vw;
+    /* height: 15vw; */
+}
+.today_wheather{
+    text-align: center;
+    line-height: 8vw;
+    /* height: 15vw; */
+}
+.realTimeTemperature{
+    font-size: 10vw;
+    text-align: center;
+    height: 15vw;
+    line-height: 15vw;
+}
+.other{
+    /* height: 5vw; */
+    display: flex;
+    justify-content: space-evenly;
+}
+.airTips{
+    height: 10vw;
+    font-size: 14px;
+    text-align: center;
+    padding: 1vw;
+}
+.date{
+    display: flex;
+    justify-content: center;
+    line-height: 10vw;
+    
+}
+
+.forecast_bar{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding: 1vw;
+    border-radius: 1.5vw;
+}
+.forecast_start{
+    display: flex;
+    justify-content:space-between;
+    height: 10vw;
+    align-items: center;
+    padding-left: 1vw;
+    padding-right: 2vw;
+}
+.forecast_start_left{
+    font-size: 18px;
+}
+.forecast_start_right{
+    font-size: 14px;
+    display:flex;
+    line-height: 14px;
+    justify-content: center;
+    align-items: center;
+}
+.forecast_end{
+    display: flex;
+    flex-direction: row;
+}
+.forecast_item{
+    flex: 1;
+    /* margin: 1vw; */
+    justify-content: center;
+    
+}
+.week{
+    text-align: center;
+    font-size: 12px;
+}
+.week_num{
+    text-align: center;
+    font-size: 14px;
+}
+.weather{
+    font-size: 2.6vw;
+    text-align: center;
+    overflow:hidden;
+    white-space:nowrap;
+}
+.temperature_icon{
+    display: flex;
+    height: 10vw;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.temperature_box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.temperature{
+    text-align: center;
+    font-size: 3.3vw;
+}
+.tips{
+    padding: 1vw;
+
+}
+.tips_item{
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 2vw;
+    height: 18vw;
+    display: flex;
+    flex-direction: row;
+    border-radius: 1.5vw;
+    font-size: 16px;
+    padding: 2vw;
+
+}
+
+.tips_item_left{
+width: 70%;
+padding: 1vw;
+}
+.tips_item_left text{
+    display: block;
+}
+.title{
+    font-size: 5vw;
+}
+.des{
+    font-size: 4vw;
+}
+.tips_item_right{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+}
+.tips_item_right text{
+    display: block;
+    
+}
+.tipt{
+    font-size: 12px;
+    
+}
+.zs{
+    font-size: 5vw;
+}
+.ad-bar{
+  margin: 2vw;
+  padding: 1vw;
+  border-radius: 1.5vw;
+}
+.bottom{
+  height: 45px;
+}
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+.tab_bar{
+  /* background: #000; */
+}
+.ad_bar{
+  margin: 2vw;
+  padding: 1vw;
+  border-radius: 1.5vw;
+}

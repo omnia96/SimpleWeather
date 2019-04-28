@@ -1,0 +1,15 @@
+<view class="page {{themes}}">
+<i-cell-group>
+<i-cell i-class="list" title="位置" label="编辑位置" value="新增位置＋" only-tap-footer="ture" link-type="navigateTo" is-link url="/pages/search/search"></i-cell>
+<i-cell i-class="list" title="{{itemName.name}}" id="{{idx}}" value="删除" only-tap-footer="ture" bind:click="delete" wx:for="{{userCityList}}" wx:for-index="idx" wx:for-item="itemName" wx:key="key"></i-cell>
+</i-cell-group>
+<view class="splitLine"/>
+<i-cell-group>
+<i-cell i-class="list" title="关于" value="详细信息" only-tap-footer="ture" link-type="navigateTo" is-link url="/pages/about/about"></i-cell>
+</i-cell-group>
+<view class='bottom'></view>
+<i-tab-bar i-class="tab_bar" fixed="true" current="{{ current }}"  bindchange="handleChange">
+    <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+    <i-tab-bar-item key="setuppage" icon="setup" current-icon="setup_fill" title="其他城市"></i-tab-bar-item>
+</i-tab-bar>
+</view>

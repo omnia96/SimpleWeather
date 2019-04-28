@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/settings/settings",
+    "pages/all/all",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "天气预报7天",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于天气定位"
+    }
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/settings/settings",
+        "text": ""
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

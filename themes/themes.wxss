@@ -1,0 +1,83 @@
+.themes_light{
+    background-color: #eeeeee;
+    color: black;
+}
+.themes_light .forecast_panel{
+    background-color: white;
+}
+.themes_light .forecast_bar .forecast_start_right{
+    color: #615d5d;
+}
+.themes_light .forecast_bar{
+    background-color: white;
+}
+.themes_light  .tips_item{
+    background-color: white;
+}
+.themes_light  .ad_bar{
+    background-color: white;
+}
+.themes_light  .bar{
+    background-color: white;
+}
+.themes_light i-cell {
+    background-color: white;
+}
+.themes_light .des{
+    color: #615d5d;
+}
+.themes_light .zs{
+    color: slategrey;
+}
+.themes_light .note{
+    color: slategrey;
+}
+.themes_light .list{
+  background: #fff;
+}
+.themes_light .tab_bar{
+  background: #fff;
+}
+
+
+
+.themes_dark{
+    background-color: #202020;
+    color: white;
+}
+.themes_dark .forecast_panel{
+    background-color: #303030;
+}
+.themes_dark .forecast_bar .forecast_start_right{
+    color: #b7b7b7;
+}
+.themes_dark .forecast_bar{
+    background-color: #303030;
+}
+.themes_dark  .tips_item{
+    background-color: #303030;
+}
+.themes_dark  .ad_bar{
+    background-color: #303030;
+}
+.themes_dark  .bar{
+    background-color: #303030;
+}
+.themes_dark .i-cell {
+    background-color: #303030;
+}
+.themes_dark .des{
+    color: #b7b7b7;
+}
+.themes_dark .zs{
+    color: slategrey;
+}
+.themes_dark .note{
+    color: slategrey;
+}
+.themes_dark .list{
+  background: #303030;
+}
+.themes_dark .tab_bar{
+  background: #303030;
+}

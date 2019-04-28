@@ -1,0 +1,3 @@
+<view class="box">
+    <text class="zs">{{air}}</text>
+</view>
