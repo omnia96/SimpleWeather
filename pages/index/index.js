@@ -34,7 +34,23 @@ Page({
     },
   },
   onLoad: function () {
-
+    this.GetLoginCode()
+  },
+  GetLoginCode(){
+    wx.login({
+      success (res) {
+        if (res.code) {
+          wx.request({
+            url: 'https://www.weixin6.com/web/wechatapp/templateMessage/onLogin.php',
+            data: {
+              code: res.code
+            }
+          })
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
+      }
+    })
   },
   TabBarSwich({
     detail
@@ -99,9 +115,6 @@ Page({
         var time = setTimeout(function () {
           that.onSwitchChange()
         }, 1000)
-
-
-
       } else {
         var cityList = app.getCache("userCityList")
         that.getUserLocation(that.getUserCityName)
@@ -313,4 +326,64 @@ Page({
       url: '../all/all?id=' + id
     })
   },
+  getOtherCity:function(id,name){
+    var that = this
+    wx.request({
+      url: 'https://www.tianqiapi.com/api/?version=v61&appid=06369426&appsecret=VVM7jMR0' + id,
+      data: {},
+      header: {},
+      success(res) {
+        console.log(res.data)
+        var res = res.data
+        var todayWeatherData = {
+          weather: res.wea,
+          weatherIcon: res.wea_img,
+          wind: res.win,
+          temperature: res.tem,
+          humidity: res.humidity,
+          visibility: res.visibility,
+          airLevel: res.air_level,
+          airTips: res.air_tips,
+          week: res.week,
+          date: res.date
+        }
+        wx.request({
+          url: 'https://www.tianqiapi.com/api/?version=v9&appid=06369426&appsecret=VVM7jMR0&cityid='+id,
+          success(res) {
+            console.log(res)
+            var res = res.data.data
+            console.log(res)
+            var weekWeatherData = []
+            for(var i = 0;i<7;i++){
+              weekWeatherData[i] = {
+                "week":res[i].week,
+                "weather":res[i].wea,
+                "weatherIcon":res[i].wea_img,
+                "temperatureMax":res[i].tem1,
+                "temperatureMin":res[i].tem2,
+                "tips":res[i].index
+              }
+            }
+            weekWeatherData[0].week = "今天"
+            weekWeatherData[1].week = "明天"
+            weekWeatherData[2].week = "后天"
+      
+            var weatherData = []
+            if(app.getCache("cache_weatherData")){
+              weatherData = that.data.weatherData
+            }
+            weatherData=({
+              "name":name,
+              "todayWeatherData":todayWeatherData,
+              "weekWeatherData":weekWeatherData
+            })
+            that.setData({
+              weatherData:weatherData
+            })
+            app.setCache("cache_weather_"+name,weatherData)
+          }
+        })
+      }
+    })
+}
 })
