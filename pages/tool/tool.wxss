@@ -1,0 +1,51 @@
+@import "/themes/themes.wxss";
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+.bar{
+    width: 86vw;
+    padding: 5vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+}
+.title{
+    font-size: 20px;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.item{
+    width: 80vw;
+    height: 20vw;
+    margin: 1vw;
+    display: flex;
+    align-items: center;
+}
+.item image{
+    width: 14vw;
+    height: 14vw;
+    margin: 2vw;
+    border-radius: 14vw;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
+}
+.title{
+    font-size: 16px;
+}
+.subtitle{
+    font-size: 12px;
+    margin-top: 1vw;
+    width: 57vw;
+    color: #aaaaaa;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

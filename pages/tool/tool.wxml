@@ -1,0 +1,23 @@
+<view class="{{themes}}">
+
+  <view class="container">
+    <view class="bar">
+      <view class="title">工具资源</view>
+      <view class="content">
+        <view class="item" data-value="{{item}}" wx:for="{{AppList}}" wx:key="key" wx:for-item="item" bind:tap="ToOtherApp">
+          <image mode="scaleToFill"  src="{{item.logo}}"></image>
+          <view class="info">
+            <view class="title">{{item.title}}</view>
+            <view class="subtitle">{{item.subtitle}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <i-tab-bar i-class="tab_bar" fixed="true" current="{{ current }}" bindchange="TabBarSwich">
+    <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+    <i-tab-bar-item key="setuppage" icon="setup" current-icon="setup_fill" title="其他城市"></i-tab-bar-item>
+    <i-tab-bar-item key="tool" icon="tasklist" current-icon="tasklist_fill" title="工具"></i-tab-bar-item>
+  </i-tab-bar>
+</view>

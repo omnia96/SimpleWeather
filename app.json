@@ -4,7 +4,8 @@
     "pages/search/search",
     "pages/settings/settings",
     "pages/all/all",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/tool/tool"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -29,8 +30,21 @@
       {
         "pagePath": "pages/settings/settings",
         "text": ""
+      },
+      {
+        "pagePath": "pages/tool/tool",
+        "text": ""
       }
     ]
   },
+  "navigateToMiniProgramAppIdList": [
+    "wx0d472828051d3e51",
+    "wx2c6faff0599f504c",
+    "wx7179cdde0aa60224",
+    "wx33f43967ea31e04e",
+    "wx8ae487c1839c9fee",
+    "wxc7b56d5f7d6c8898",
+    "wxff032bc0b05046bd"
+  ],
   "sitemapLocation": "sitemap.json"
 }

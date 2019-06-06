@@ -14,13 +14,44 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  handleChange({ detail }) {
-    if (detail.key === "setuppage") {
-      this.onShow()
-    } else {
-      wx.switchTab({
-        url: "../index/index"
-      })
+  TabBarSwich({
+    detail
+  }) {
+    let current = this.data.current
+    switch (detail.key) {
+      case "homepage":
+        if (detail.key == current) {
+          this.onShow()
+        } else {
+          wx.switchTab({
+            url: "../index/index"
+          })
+        }
+        break;
+
+      case "setuppage":
+        if (detail.key == current) {
+          this.onShow()
+        } else {
+          wx.switchTab({
+            url: "../settings/settings"
+          })
+        }
+        break;
+
+      case "tool":
+        if (detail.key == current) {
+          this.onShow()
+        } else {
+          wx.switchTab({
+            url: "../tool/tool"
+          })
+        }
+        break;
+
+      default:
+        this.onShow()
+        break;
     }
   },
   onLoad: function (options) {

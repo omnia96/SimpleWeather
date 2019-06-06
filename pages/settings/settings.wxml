@@ -8,8 +8,9 @@
 <i-cell i-class="list" title="关于" value="详细信息" only-tap-footer="ture" link-type="navigateTo" is-link url="/pages/about/about"></i-cell>
 </i-cell-group>
 <view class='bottom'></view>
-<i-tab-bar i-class="tab_bar" fixed="true" current="{{ current }}"  bindchange="handleChange">
+<i-tab-bar i-class="tab_bar" fixed="true" current="{{ current }}" bindchange="TabBarSwich">
     <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
     <i-tab-bar-item key="setuppage" icon="setup" current-icon="setup_fill" title="其他城市"></i-tab-bar-item>
-</i-tab-bar>
+    <i-tab-bar-item key="tool" icon="tasklist" current-icon="tasklist_fill" title="工具"></i-tab-bar-item>
+  </i-tab-bar>
 </view>

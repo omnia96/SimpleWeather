@@ -1,6 +1,6 @@
 <view class='{{themes}}'>
-<swiper class="swiper-home" current="{{current}}" bindchange="onSwiperChange">
-    <swiper-item wx:for="{{weatherData}}" wx:for-index="idx" wx:for-item="itemName" wx:key="key" >
+  <swiper class="swiper-home" current="{{swiperCurrent}}" bindchange="onSwiperChange">
+    <swiper-item wx:for="{{weatherData}}" wx:for-index="idx" wx:for-item="itemName" wx:key="key">
       <scroll-view class="scroll" scroll-y="true">
         <view class="top" />
         <view class="forecast_panel">
@@ -22,14 +22,14 @@
 
         <view class="forecast_bar">
           <view class="forecast_start">
-            <view class="forecast_start_left">5天预报</view>
+            <view class="forecast_start_left">7天预报</view>
             <navigator class="forecast_start_right" url="/pages/all/all?id={{cityId}}">15天30天预报
               <D-icon size="5vw" iconName="{{weatherIcon.qing}}" />
             </navigator>
           </view>
           <view class="forecast_end">
             <view class="forecast_item" wx:for="{{itemName.weekWeatherData}}" wx:for-index="idx" wx:for-item="itemName"
-              wx:key="key" >
+              wx:key="key">
               <view class="week">{{itemName.week}}</view>
               <view class="weather">{{itemName.weather}}
               </view>
@@ -44,26 +44,29 @@
             </view>
           </view>
         </view>
-        <view class='ad_bar'><ad unit-id="adunit-d3ce5374005455eb"></ad></view>
+        <view class='ad_bar'>
+          <ad unit-id="adunit-d3ce5374005455eb"></ad>
+        </view>
         <view class="tips">
-            <view class="tips_item" wx:for="{{itemName.weekWeatherData[0].tips}}" wx:for-index="idx"
-              wx:for-item="itemName" wx:key="key">
-              <view class="tips_item_left">
-                <text class="title">{{itemName.title}}</text>
-                <text class="des">{{itemName.desc}}</text>
-              </view>
-              <view class="tips_item_right">
-                <text class="zs">{{itemName.level}}</text>
-              </view>
+          <view class="tips_item" wx:for="{{itemName.weekWeatherData[0].tips}}" wx:for-index="idx"
+            wx:for-item="itemName" wx:key="key">
+            <view class="tips_item_left">
+              <text class="title">{{itemName.title}}</text>
+              <text class="des">{{itemName.desc}}</text>
+            </view>
+            <view class="tips_item_right">
+              <text class="zs">{{itemName.level}}</text>
             </view>
           </view>
+        </view>
       </scroll-view>
     </swiper-item>
   </swiper>
   <view class="bottom" />
-        <i-tab-bar i-class="tab_bar" fixed="true" current="{{ current }}"  bindchange="handleChange">
+  <i-tab-bar i-class="tab_bar" fixed="true" current="{{ current }}" bindchange="TabBarSwich">
     <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
     <i-tab-bar-item key="setuppage" icon="setup" current-icon="setup_fill" title="其他城市"></i-tab-bar-item>
-</i-tab-bar>
+    <i-tab-bar-item key="tool" icon="tasklist" current-icon="tasklist_fill" title="工具"></i-tab-bar-item>
+  </i-tab-bar>
   <i-spin size="large" fix wx:if="{{ spinShow }}"></i-spin>
-  </view>
+</view>

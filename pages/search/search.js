@@ -76,7 +76,7 @@ Page({
   requireToday: function (id,name) {
     var that = this
     wx.request({
-      url: 'https://www.tianqiapi.com/api/?version=v6&cityid=' + id,
+      url: 'https://www.tianqiapi.com/api/?version=v61&appid=06369426&appsecret=VVM7jMR0&cityid=' + id,
       // url:'https://www.tianqiapi.com/api/',
       data: {},
       header: {},
@@ -102,7 +102,7 @@ Page({
   requireWeek: function (id,name,value) {
     let that = this
     wx.request({
-      url: 'https://www.tianqiapi.com/api/?version=v1&cityid='+id,
+      url: 'https://www.tianqiapi.com/api/?version=v9&appid=06369426&appsecret=VVM7jMR0&cityid='+id,
       success(res) {
         console.log(res)
         var res = res.data.data

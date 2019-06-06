@@ -1,5 +1,6 @@
 .themes_light{
     background-color: #eeeeee;
+    min-height: 100vh;
     color: black;
 }
 .themes_light .forecast_panel{
@@ -44,6 +45,7 @@
 .themes_dark{
     background-color: #202020;
     color: white;
+    min-height: 100vh;
 }
 .themes_dark .forecast_panel{
     background-color: #303030;
